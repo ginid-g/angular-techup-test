@@ -1,0 +1,16 @@
+<div
+  ng2FileDrop
+  class="my-drop-zone"
+  (click)="selectFile()"
+  (onFileDrop)="onFileSelected($event)"
+>
+  {{ fileName || "Choose and drag & drop file here" }}
+</div>
+
+<input
+  #fileInput
+  class="file-input"
+  type="file"
+  ng2FileSelect
+  (onFileSelected)="onFileSelected($event)"
+/>

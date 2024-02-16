@@ -1,10 +1,20 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">List of pins</div>
+  <div class="row my-2">
+    <div class="col-md-6">
+      <h3>List of pins</h3>
+    </div>
     <div class="col-md-6 text-end">
       <button class="btn btn-primary" (click)="addCustomer()">
         Add Customer
       </button>
+      <br />
+      <button class="btn btn-primary mt-2" (click)="addPin()">Add Pin</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-pin-list></app-pin-list>
     </div>
   </div>
 </div>

@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Collaborators</th>
+      <th>Privacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pin of pins$ | async">
+      <td>{{ pin.title }}</td>
+      <td>
+        <img class="pin-image" [src]="pin.image" alt="pin image" />
+      </td>
+      <td>
+        <ng-container *ngIf="pin.collaborator && pin.collaborator.length">
+          <p *ngFor="let collaborator of pin.collaborator">
+            {{ collaborator }}
+          </p>
+        </ng-container>
+      </td>
+      <td class="text-capitalize">
+        {{ pin.privacy }}
+      </td>
+    </tr>
+  </tbody>
+</table>
